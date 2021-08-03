@@ -15,7 +15,15 @@
 				<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		
-	<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'nonce-3241313'; img-src https://* www.googletagmanager.com; child-src 'none';">
+	<meta http-equiv="Content-Security-Policy" content="
+							    default-src 'self'; 
+							    script-src 'nonce-3241313' https://tagmanager.google.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.googleadservices.com https://www.google.com;
+							    img-src 'self' www.googletagmanager.com https://ssl.gstatic.com https://www.gstatic.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com; 
+							    style-src https://tagmanager.google.com https://fonts.googleapis.com;
+							    connect-src https://www.google-analytics.com;
+							    font-src https://fonts.gstatic.com data:;
+							    frame-src https://bid.g.doubleclick.net;
+							   ">
 		
 		<!-- Google Tag Manager -->
 	<script nonce='3241313'>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
