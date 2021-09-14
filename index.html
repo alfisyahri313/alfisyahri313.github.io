@@ -40,7 +40,19 @@
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
 	n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-TD263X2');</script>
+	})(window,document,'script','dataLayer','GTM-TD263X2');
+	window['GoogleAnalyticsObject']='ga';window['ga']=window['ga']||function(){(window['ga'].q=window['ga'].q||[]).push(arguments)}
+	window.ga(function() {
+	var tracker = window.ga.getAll();
+	if (tracker.length) {
+		var clientId = tracker[0].get('clientId');
+		// Do something with Client ID
+		console.log(clientId);
+	}
+	});
+	
+	
+	</script>
 	<!-- End Google Tag Manager -->
 
 	<!-- Google Tag Manager -->	
