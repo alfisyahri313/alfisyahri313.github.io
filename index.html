@@ -15,7 +15,7 @@
 				<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		
-	<!-- <meta http-equiv="Content-Security-Policy" content="
+	<meta http-equiv="Content-Security-Policy" content="
 							    default-src 'self'; 
 							    script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g==';
 							    img-src 'self' www.googletagmanager.com https://ssl.gstatic.com https://www.gstatic.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.co.id data:; 
@@ -23,7 +23,7 @@
 							    connect-src 'self' https://tracking.js https://www.google-analytics.com https://analytics.google.com https://api.ipregistry.co http://localhost:8080/ https://stats.g.doubleclick.net;
 							    font-src https://fonts.gstatic.com data:;
 							    frame-src https://bid.g.doubleclick.net;
-							   "> -->
+							   ">
 		
 		<!-- Google Tag Manager -->
 <!-- 	<script nonce='3241313'>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -35,7 +35,8 @@
 	<!-- End Google Tag Manager -->
 		
 	<!-- Google Tag Manager -->
-	<script id='GTMSnippet'nonce='8IBTHwOdqNKAWeKl7plt8g=='>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	<script id='GTMSnippet'nonce='8IBTHwOdqNKAWeKl7plt8g=='>
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
@@ -44,7 +45,8 @@
 	
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;var n = s.querySelector('[nonce]');
+	n && a.setAttribute('nonce', n.nonce || n.getAttribute('nonce'));m.parentNode.insertBefore(a,m)
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-123456-7', 'auto');
 	
