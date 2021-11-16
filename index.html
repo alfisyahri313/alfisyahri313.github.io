@@ -41,9 +41,7 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-TD263X2');
 	
-	ga(function(tracker) {
-		console.log(tracker.get('clientId'));
-	});
+
 	</script>
 	
 	<!-- End Google Tag Manager -->		
@@ -232,5 +230,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 // 			fjs.parentNode.insertBefore(js, fjs);
 // 			}(document, 'script', 'facebook-jssdk'));
 		</script> -->
+
+		<script>
+			setTimeout(function(){
+				ga(function(tracker) {
+					console.log(tracker.get('clientId'));
+				});
+			}, 5000);
+		</script>
 	</body>
 </html>
