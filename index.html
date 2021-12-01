@@ -117,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<p>Link to go to gitlab domain<a href="https://alfisyahri313.gitlab.io/">Here</a></p>
 				<p>Link to go to Other Page in this domain<a href="https://alfisyahri313.github.io/other/page1">Here</a></p>
 				<p>Link to go to IKEA<a href="https://ikea.com">Here</a></p>
-				<p>Link to go to web owner domain<a href="https://iniadalahsebuahwebsite.000webhostapp.com/">Web Gio</a></p>
+				<p>Link to go to web owner domain <a href="https://iniadalahsebuahwebsite.000webhostapp.com/">Web Gio</a></p>
 
 <!-- 
 				<button on-click="signInWithGoogle()">Sign In With Google</button>
@@ -139,6 +139,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         		<li><a href="https://github.com/alfisyahri313" target="_blank">github.com/alfisyahri313</a></li>
 			</ul>
 		</footer>
+
+		<script>
+			function createCookie(name, value, days) {
+				var expires;
+				if (days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+					expires = "; expires=" + date.toGMTString();
+				}
+				else {
+					expires = "";
+				}
+				document.cookie = name + "=" + value + "; SameSite=None; SameParty; Secure"+ expires + "; path=/" ;
+			}
+
+			function getCookie(c_name) {
+				if (document.cookie.length > 0) {
+					c_start = document.cookie.indexOf(c_name + "=");
+					if (c_start != -1) {
+						c_start = c_start + c_name.length + 1;
+						c_end = document.cookie.indexOf(";", c_start);
+						if (c_end == -1) {
+							c_end = document.cookie.length;
+						}
+						return unescape(document.cookie.substring(c_start, c_end));
+					}
+				}
+				return "";
+			}
+
+			if(getCookie("globalUid") == ""){
+				var id = function () {return 'uid_' + Math.random().toString(36).substr(2, 9);};
+				createCookie("globalUid", id, 365)
+			}
+		</script>
 		
 		<!-- <script nonce="this.nonce=document.getElementById('GTMSnippet').nonce">
 			alert(document.domain);
