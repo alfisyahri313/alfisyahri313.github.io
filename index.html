@@ -170,7 +170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			}
 
 			if(getCookie("globalUid") === ""){
-				var id = function () {return 'uid_' + Math.random().toString(36).substr(2, 9);};
+				var id = 'uid_' + Math.random().toString(36).substr(2, 9);
 				createCookie("globalUid", id, 365)
 			}
 		</script>
