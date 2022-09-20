@@ -73,9 +73,7 @@ limitations under the License.
           "extraUrlParams": {
             "event__str_event_category": "General Event",
             "event__str_event_action": "Navigation",
-            "event__str_event_label": "Home",
-            "user__str_user_id": "UserTest1234",
-            "user__str_client_id": "${clientId}”
+            "event__str_event_label": "Home"
           }       
         },
         "scrollTracking": {
@@ -96,8 +94,11 @@ limitations under the License.
               "useInitialPageSize": false
           }
         } 
+      },
+      "extraUrlParams": {
+        "user__str_user_id": "UserTest1234",
+        "user__str_client_id": "${clientId}"
       }
-
   }
   </script>
   </amp-analytics> 
