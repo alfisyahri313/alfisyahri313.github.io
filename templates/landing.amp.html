@@ -61,6 +61,23 @@ limitations under the License.
                   "WEBVITALS_TRACKING": false,
                   "PERFORMANCE_TIMING_TRACKING": false,
                   "SEND_DOUBLECLICK_BEACON": false
+      },
+      triggers:{
+        "scrollTracking": {
+          "on": "scroll",
+          "request": "ga4Event",
+          "vars": {
+              "ga4_event_name": "scroll"
+          },
+          "extraUrlParams": {
+              "event__str_percent_scrolled": "${verticalScrollBoundary}%"
+          },
+          "scrollSpec": {
+              "verticalBoundaries": [25, 50, 75, 90],
+              "horizontalBoundaries": [],
+              "useInitialPageSize": false
+          }
+        } 
       }
   }
   </script>
