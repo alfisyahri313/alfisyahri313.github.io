@@ -40,7 +40,7 @@ limitations under the License.
         </head>
 <body>
  <!-- Google Tag Manager -->
-<!-- <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-5F76HKX&gtm_auth=JllgA9QFfE46AaIm0HoxVg&gtm_preview=env-1&gtm_cookies_win=x&gtm.url=SOURCE_URL" data-credentials="include">
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-5F76HKX&gtm_auth=JllgA9QFfE46AaIm0HoxVg&gtm_preview=env-1&gtm_cookies_win=x&gtm.url=SOURCE_URL" data-credentials="include">
 <script type="application/json">
 {
   "vars" : {
@@ -48,7 +48,7 @@ limitations under the License.
   }
 }
 </script>      
-</amp-analytics> -->
+</amp-analytics>
 
 <amp-analytics type="googleanalytics" data-credentials="include">
   <script type="application/json">
@@ -130,7 +130,9 @@ limitations under the License.
             "extraUrlParams": {
               "event__str_event_category": "General Event",
               "event__str_event_action": "Navigation",
-              "event__str_event_label": "Home"
+              "event__str_event_label": "Home",
+              "user__str_user_id": "UserTest1234",
+              "user__str_client_id": "${clientId}"
             }       
           },
           "scrollTracking": {
