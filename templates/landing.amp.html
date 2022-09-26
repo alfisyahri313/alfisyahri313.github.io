@@ -168,7 +168,7 @@ limitations under the License.
           }
       },
       "vars": {
-          "documentLocation": "SOURCE_URL",
+          "documentLocation": "SOURCE_URL&utm_medium=${medium}&utm_source${source}",
           "clientId": "CLIENT_ID(AMP_ECID_GOOGLE,,_ga,true)",
           "dataSource": "AMP",
           "isDebugEnabled": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)",
@@ -179,7 +179,9 @@ limitations under the License.
           "GOOGLE_CONSENT_ENABLED": false,
           "WEBVITALS_TRACKING": false,
           "PERFORMANCE_TIMING_TRACKING": false,
-          "SEND_DOUBLECLICK_BEACON": false
+          "SEND_DOUBLECLICK_BEACON": false,
+          "source":"AMP Page",
+          "medium":"direct"
       },
       "extraUrlParams": {
           "sid": "$CALC(SESSION_TIMESTAMP, 1000, divide, true)",
