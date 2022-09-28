@@ -168,7 +168,7 @@ limitations under the License.
           }
       },
       "vars": {
-          "documentLocation": "SOURCE_URL$MATCH(${SOURCE_URL}, \\?, 0)",
+          "documentLocation": "$MATCH(${SOURCE_URL}, \\?, 0)",
           "clientId": "CLIENT_ID(AMP_ECID_GOOGLE,,_ga,true)",
           "dataSource": "AMP",
           "isDebugEnabled": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)",
