@@ -168,7 +168,7 @@ limitations under the License.
           }
       },
       "vars": {
-          "documentLocation": "$IF($EQUALS($MATCH(${SOURCE_URL}, \\?, 0),?),SOURCE_URL&utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC},SOURCE_URL?utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC})",
+          "documentLocation": "$IF($EQUALS($MATCH(${SOURCE_URL}, dbg, 0),dbg),SOURCE_URL&utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC},SOURCE_URL?utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC})",
           "clientId": "CLIENT_ID(AMP_ECID_GOOGLE,,_ga,true)",
           "dataSource": "AMP",
           "isDebugEnabled": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)",
