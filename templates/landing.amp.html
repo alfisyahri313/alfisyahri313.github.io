@@ -168,7 +168,7 @@ limitations under the License.
           }
       },
       "vars": {
-          "documentLocation": "$MATCH(SOURCE_URL, \\?, 0)",
+          "documentLocation": "$IF($EQUALS($MATCH(SOURCE_URL, \\?, 0),?),SOURCE_URL&utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC},SOURCE_URL?utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC})",
           "clientId": "CLIENT_ID(AMP_ECID_GOOGLE,,_ga,true)",
           "dataSource": "AMP",
           "isDebugEnabled": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)",
@@ -182,7 +182,7 @@ limitations under the License.
           "SEND_DOUBLECLICK_BEACON": false,
           "SOURCE_AMP":"AMP%20Page",
           "MEDIUM_ORGANIC":"direct",
-          "version":"v4"
+          "version":"v5"
       },
       "extraUrlParams": {
           "sid": "$CALC(SESSION_TIMESTAMP, 1000, divide, true)",
