@@ -50,6 +50,22 @@ limitations under the License.
 </script>      
 </amp-analytics>
 
+<amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
+  <script type="application/json">
+  {
+      "vars": {
+                  "GA4_MEASUREMENT_ID": "G-0FWNJCZDX3",
+                  "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
+                  "DEFAULT_PAGEVIEW_ENABLED": true,    
+                  "GOOGLE_CONSENT_ENABLED": false,
+                  "WEBVITALS_TRACKING": false,
+                  "PERFORMANCE_TIMING_TRACKING": false,
+                  "SEND_DOUBLECLICK_BEACON": false
+      }
+  }
+  </script>
+  </amp-analytics> 
+
 <amp-analytics type="googleanalytics" data-credentials="include">
   <script type="application/json">
     {
@@ -168,7 +184,7 @@ limitations under the License.
           }
       },
       "vars": {
-          "documentLocation": "$IF($EQUALS($MATCH(SOURCE_URL, \\?, 0),?),SOURCE_URL&utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC},SOURCE_URL?utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_ORGANIC})",
+          "documentLocation": "$IF($EQUALS($MATCH(SOURCE_URL, \\?, 0),?),SOURCE_URL&utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_AMP},SOURCE_URL?utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_AMP})",
           "clientId": "CLIENT_ID(AMP_ECID_GOOGLE,,_ga,true)",
           "dataSource": "AMP",
           "isDebugEnabled": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)",
@@ -181,7 +197,7 @@ limitations under the License.
           "PERFORMANCE_TIMING_TRACKING": false,
           "SEND_DOUBLECLICK_BEACON": false,
           "SOURCE_AMP":"AMP%20Page",
-          "MEDIUM_ORGANIC":"organic",
+          "MEDIUM_AMP":"organic",
           "version":"v5"
       },
       "extraUrlParams": {
