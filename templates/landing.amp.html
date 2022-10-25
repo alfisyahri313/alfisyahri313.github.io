@@ -72,6 +72,9 @@ limitations under the License.
       "cookies": {
           "_ga": {
               "value": "$IF(LINKER_PARAM(_gl, _ga),GA1.0.LINKER_PARAM(_gl, _ga),)"
+          },
+          "_ga_HVXVXGT4E2" :{
+              "value": "GS1.1.$(gaContainedId)"
           }
       },
       "linkers": {
@@ -79,7 +82,7 @@ limitations under the License.
               "enabled": true,
               "ids": {
                   "_ga": "${clientId}",
-                  "_ga_HVXVXGT4E2" : "COOKIE(_ga_HVXVXGT4E2)"
+                  "_ga_HVXVXGT4E2" : "$(gaContainedId)"
               },
               "proxyOnly": false,
               "destinationDomains":["*github.io*","*gitlab.io*","*alfisyahri313.github.io*"]
@@ -205,6 +208,7 @@ limitations under the License.
       "extraUrlParams": {
           "sid": "$CALC(SESSION_TIMESTAMP, 1000, divide, true)",
           "sct": "SESSION_COUNT",
+          "gaContainedId" : "$(sid).$(sct).0.$(sid).60.0.0"
           "seg": "$IF($EQUALS(SESSION_ENGAGED, true),1,0)",
           "_et": "$CALC(INCREMENTAL_ENGAGED_TIME,1000, multiply)",
           "gcs": "$IF($EQUALS(${GOOGLE_CONSENT_ENABLED},TRUE),G10$IF($EQUALS(CONSENT_STATE,sufficient),1,0),)"
