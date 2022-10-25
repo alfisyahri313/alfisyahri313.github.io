@@ -204,7 +204,9 @@ limitations under the License.
           "SOURCE_AMP":"AMP%20Page",
           "MEDIUM_AMP":"organic",
           "version":"v5",
-          "gaContainedId" : "1666676048.2.1.1666676997.7.0"
+          "gaContainedId" : "${sessionId}.${sessionCount}.0.${sessionId}.60.0",
+          "sessionId" : "$CALC(SESSION_TIMESTAMP, 1000, divide, true)",
+          "sessionCount": "SESSION_COUNT"
       },
       "extraUrlParams": {
           "sid": "$CALC(SESSION_TIMESTAMP, 1000, divide, true)",
