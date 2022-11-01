@@ -214,7 +214,10 @@ limitations under the License.
           "sct": "SESSION_COUNT",
           "seg": "$IF($EQUALS(SESSION_ENGAGED, true),1,0)",
           "_et": "$CALC(INCREMENTAL_ENGAGED_TIME,1000, multiply)",
-          "gcs": "$IF($EQUALS(${GOOGLE_CONSENT_ENABLED},TRUE),G10$IF($EQUALS(CONSENT_STATE,sufficient),1,0),)"
+          "gcs": "$IF($EQUALS(${GOOGLE_CONSENT_ENABLED},TRUE),G10$IF($EQUALS(CONSENT_STATE,sufficient),1,0),)",
+          "user__str_user_id": "UserTest1234",
+          "user__str_client_id": "${clientId}",
+          "user__num_lifetime_value": "147.34" 
       },
       "extraUrlParamsReplaceMap": {
           "user__str_": "up.",
