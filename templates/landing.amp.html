@@ -154,7 +154,7 @@ limitations under the License.
               "event__str_event_label": "Home",
               "event__num_event_value": "2.0",
               "user__str_user_id": "UserTest1234",
-              "user__str_client_id": "${clientId}",
+              "user__str_client_id": "${clientId}.",
               "user__num_lifetime_value": "147.34"
             }       
           },
@@ -208,7 +208,7 @@ limitations under the License.
           "version":"v5",
           "gaContainerId" : "${sessionId}.${sessionCount}.0.${lastHit}.60.0.0",
           "sessionId" : "$CALC(SESSION_TIMESTAMP, 1000, divide, true)",
-          "lastHit" : "$CALC(TIMESTAMP, 1000, divide, true)",
+          "eventHit" : "$CALC(TIMESTAMP, 1000, divide, true)",
           "sessionCount": "SESSION_COUNT"
       },
       "extraUrlParams": {
