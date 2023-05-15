@@ -40,7 +40,7 @@ limitations under the License.
         </head>
 <body>
  <!-- Google Tag Manager -->
-<!-- <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-5F76HKX&gtm_auth=JllgA9QFfE46AaIm0HoxVg&gtm_preview=env-1&gtm_cookies_win=x&gtm.url=SOURCE_URL" data-credentials="include">
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-5F76HKX&gtm_auth=JllgA9QFfE46AaIm0HoxVg&gtm_preview=env-1&gtm_cookies_win=x&gtm.url=SOURCE_URL" data-credentials="include">
 <script type="application/json">
 {
   "vars" : {
@@ -49,7 +49,7 @@ limitations under the License.
 }
 </script>      
 </amp-analytics>
-
+<!-- 
 <amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
   <script type="application/json">
   {
@@ -191,8 +191,7 @@ limitations under the License.
           }
       },
       "vars": {
-          "documentLocation": "$IF($EQUALS($MATCH(SOURCE_URL, \\?, 0),?),SOURCE_URL&utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_AMP},SOURCE_URL?utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_AMP})",
-          "clientId": "CLIENT_ID(AMP_ECID_GOOGLE,,_ga,true)",
+          "documentLocation": "$IF($EQUALS($MATCH(SOURCE_URL, \\?, 0),?),$IF($EQUALS($MATCH(SOURCE_URL, utm_source, 0),utm_source),$IF($EQUALS($MATCH(SOURCE_URL, utm_medium, 0),utm_medium),SOURCE_URL,SOURCE_URL),SOURCE_URL&utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_AMP}),SOURCE_URL?utm_source=${SOURCE_AMP}&utm_medium=${MEDIUM_AMP})",
           "dataSource": "AMP",
           "isDebugEnabled": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)",
           "endpoint": "$IF(${DISABLE_REGIONAL_DATA_COLLECTION},https://${GA4_ENDPOINT_HOSTNAME}, https://$IF($EQUALS($MATCH(${timezoneCode}, Europe, 0),Europe), $REPLACE(${GA4_ENDPOINT_HOSTNAME},www.google-analytics.com,region1.google-analytics.com), ${GA4_ENDPOINT_HOSTNAME}))",
