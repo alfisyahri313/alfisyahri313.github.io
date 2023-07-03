@@ -49,6 +49,27 @@ limitations under the License.
 }
 </script>      
 </amp-analytics>
+
+
+<amp-analytics type="gtag" data-credentials="include">
+  <script type="application/json">
+  {
+    "vars": {
+      "gtag_id": "G-30P7D0LEHY",
+      "linker": {
+        "domains": ["alfisyahri313.github.io", "alfisyahri313.gitlab.io"]
+      }
+      ,
+      "config": {
+        "G-30P7D0LEHY": {
+          "groups": "default"
+        }
+      }
+    }
+  }
+  </script>
+  </amp-analytics>
+
 <!-- 
 <amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
   <script type="application/json">
@@ -66,7 +87,7 @@ limitations under the License.
   </script>
   </amp-analytics>  -->
 
-<amp-analytics type="googleanalytics" data-credentials="include">
+{% comment %} <amp-analytics type="googleanalytics" data-credentials="include">
   <script type="application/json">
     {
       "cookies": {
@@ -245,7 +266,7 @@ limitations under the License.
     }  
 
   </script>
-  </amp-analytics> 
+  </amp-analytics>  {% endcomment %}
 
   <!-- Start Navbar -->
   <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4 pt2 md-pt0">
