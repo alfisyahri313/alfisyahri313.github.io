@@ -65,6 +65,19 @@ limitations under the License.
           "groups": "default"
         }
       }
+    },
+    "triggers": {
+      "home-logo-click": {
+        "selector": ".ampstart-headerbar-home-link",
+        "on": "click",
+        "vars": {
+          "event_name": "general_event",
+          "method": "Google",
+          "event_category":"General Event",
+          "event_action":"Navigation",
+          "event_label":"Home"
+        }
+      }
     }
   }
   </script>
