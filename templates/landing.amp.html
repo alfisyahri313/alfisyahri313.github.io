@@ -75,7 +75,16 @@ limitations under the License.
           "event_action":"Navigation",
           "event_label":"Home"
         }
-      }
+      },
+      "triggers": {
+        "recomendationsViewed": {
+          "selector": "#secondBanner",
+          "on": "visible",
+          "vars": {
+            "event_name": "general_event",
+          }
+        }
+      }    
     },
     "extraUrlParams": {
       "up.client_id": "${clientId}.",
