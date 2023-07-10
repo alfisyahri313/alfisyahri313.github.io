@@ -63,7 +63,8 @@ limitations under the License.
         "G-30P7D0LEHY": {
           "groups" : "default"
         }
-      }
+      }, 
+      "isDebugEnabled": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)"
     },
     "triggers": {
       "home-logo-click": {
@@ -95,7 +96,10 @@ limitations under the License.
       "up.client_id": "${clientId}.",
       "cm":"organic",
       "cs":"AMP Page",
-      "_dbg":""
+      "debugVar":"1"
+    },
+    "extraUrlParamsReplaceMap": {
+      "debugVar": "${isDebugEnabled}"
     }
   }
   </script>
