@@ -95,7 +95,10 @@ limitations under the License.
       "up.client_id": "${clientId}.",
       "cm":"organic",
       "cs":"AMP Page",
-      "_dbg":"$IF($EQUALS(QUERY_PARAM(_dbg),1), 1, 0)"
+      "debugVar":"1"
+    },
+    "extraUrlParamsReplaceMap": {
+      "debugVar": "$IF($EQUALS(QUERY_PARAM(_dbg),1), _dbg, __dbg)"
     }
   }
   </script>
