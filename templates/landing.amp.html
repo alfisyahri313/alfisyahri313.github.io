@@ -51,7 +51,7 @@ limitations under the License.
 </amp-analytics>
 
 
-<!-- <amp-analytics type="gtag" data-credentials="include">
+<amp-analytics type="gtag" data-credentials="include">
   <script type="application/json">
   {
     "vars": {
@@ -98,107 +98,6 @@ limitations under the License.
     }
   }
   </script>
-  </amp-analytics> -->
-  <amp-analytics type="gtag" data-credentials="include">
-    <script type="application/json">
-      {
-        "vars" : {
-          "gtag_id": "G-2HRD8GFP7Y",
-          "linker": {
-            "domains": ["*sindonews.com*"]
-          },
-          "config" : {
-            "G-2HRD8GFP7Y": { 
-              "groups": "default" 
-            }
-          }
-        },
-        "extraUrlParams": {
-          "up.custom_client_id": "${clientId}.",
-          "cs": "AMP Page",
-          "cm": "organic"
-        },
-        "triggers": {
-          "tags": {
-            "selector": ".topik a",
-            "on": "click",
-            "vars": {
-              "event_name": "general_event",
-              "event_category": "article_amp",
-              "event_action": "amp_topik_terkait_click",
-              "event_label": "tekno - https://tekno.sindonews.com/read/1160839/123/kecerdasan-buatan-dipakai-di-mesin-cuci-lg-agar-nyuci-lebih-hemat-1690358870",
-              "method": "Google"
-            }
-          },
-          "berita_terkait": {
-            "selector": ".berita-terkait a",
-            "on": "click",
-            "vars": {
-              "event_name": "general_event",
-              "event_category": "article_amp",
-              "event_action": "amp_terkait_click",
-              "event_label": "tekno - https://tekno.sindonews.com/read/1160839/123/kecerdasan-buatan-dipakai-di-mesin-cuci-lg-agar-nyuci-lebih-hemat-1690358870",
-              "method": "Google"
-            }
-          },
-          "berita_terkini": {
-            "selector": ".detail-berita-lain a",
-            "on": "click",
-            "vars": {
-              "event_name": "general_event",
-              "event_category": "article_amp",
-              "event_action": "amp_terkini_click",
-              "event_label": "tekno - https://tekno.sindonews.com/read/1160839/123/kecerdasan-buatan-dipakai-di-mesin-cuci-lg-agar-nyuci-lebih-hemat-1690358870",
-              "method": "Google"
-            }
-          },
-          "berita_terpopuler": {
-            "selector": ".title-terpopuler a",
-            "on": "click",
-            "vars": {
-              "event_name": "general_event",
-              "event_category": "article_amp",
-              "event_action": "amp_terpopuler_click",
-              "event_label": "tekno - https://tekno.sindonews.com/read/1160839/123/kecerdasan-buatan-dipakai-di-mesin-cuci-lg-agar-nyuci-lebih-hemat-1690358870",
-              "method": "Google"
-            }
-          },
-          "baca_juga": {
-            "selector": ".detail-desc a",
-            "on": "click",
-            "vars": {
-              "event_name": "general_event",
-              "event_category": "article_amp",
-              "event_action": "amp_bacajuga_click",
-              "event_label": "tekno - https://tekno.sindonews.com/read/1160839/123/kecerdasan-buatan-dipakai-di-mesin-cuci-lg-agar-nyuci-lebih-hemat-1690358870",
-              "method": "Google"
-            }
-          },
-          "paging": {
-            "selector": ".paging a",
-            "on": "click",
-            "vars": {
-              "event_name": "general_event",
-              "event_category": "article_amp",
-              "event_action": "amp_pagination_click",
-              "event_label": "tekno - https://tekno.sindonews.com/read/1160839/123/kecerdasan-buatan-dipakai-di-mesin-cuci-lg-agar-nyuci-lebih-hemat-1690358870",
-              "method": "Google"
-            }
-          },
-          "paging_all": {
-            "selector": ".paging-all a",
-            "on": "click",
-            "vars": {
-              "event_name": "general_event",
-              "event_category": "article_amp",
-              "event_action": "amp_pagination_showall_click",
-              "event_label": "tekno - https://tekno.sindonews.com/read/1160839/123/kecerdasan-buatan-dipakai-di-mesin-cuci-lg-agar-nyuci-lebih-hemat-1690358870",
-              "method": "Google"
-            }
-          }
-        }
-      }
-    </script>
   </amp-analytics>
 
 <!-- 
