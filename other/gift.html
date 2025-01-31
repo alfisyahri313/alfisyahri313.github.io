@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Exchange Randomizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 150px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Gift Exchange Randomizer</h2>
+    <p>Enter names (one per line):</p>
+    <textarea id="nameList" placeholder="Enter names here..."></textarea><br>
+    <button onclick="randomizeGifts()">Randomize Gift Exchange</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function randomizeGifts() {
+            let input = document.getElementById("nameList").value.trim();
+            if (!input) {
+                alert("Please enter at least two names.");
+                return;
+            }
+
+            let names = input.split("\n").map(name => name.trim()).filter(name => name);
+            if (names.length < 2) {
+                alert("You need at least two names for gift exchange.");
+                return;
+            }
+
+            let shuffled = [...names];
+            do {
+                shuffled = shuffleArray([...names]);
+            } while (!isValidPairing(names, shuffled));
+
+            let resultHtml = "<h3>Gift Exchange Pairs:</h3><ul>";
+            for (let i = 0; i < names.length; i++) {
+                resultHtml += `<li>${names[i]} → ${shuffled[i]}</li>`;
+            }
+            resultHtml += "</ul>";
+            document.getElementById("result").innerHTML = resultHtml;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function isValidPairing(original, shuffled) {
+            for (let i = 0; i < original.length; i++) {
+                if (original[i] === shuffled[i]) return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
